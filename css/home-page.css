@@ -1,0 +1,249 @@
+* {
+margin: 0px;
+font-family: 'Roboto Slab', serif;
+}
+
+/*------- MOBILE FIRST -------*/
+
+@media screen and (min-width: 320px) {
+
+.navbar {
+    background-color: #EFE66D;
+    height: 50px;
+}
+
+.container {
+    display:flex;
+    flex-direction: row;
+}
+
+.logo-navbar {
+    height: 40px;
+    position:fixed;
+    right: 85%;
+    top: 2px;
+}
+
+.menu-hamburguer {
+    width: 35px;
+    height: 35px;
+    position: relative;
+    top: 7px;
+    left: 85%;
+    
+}
+
+.menu-hamburguer label {
+    width: 100%;
+    height: 100%;
+    background-color: #9275B1;
+    position: absolute;
+    transition: all .3s linear;
+}
+
+#check {
+    position: absolute;
+    z-index: 1;
+    display: none;
+}
+
+span {
+    width: 25px;
+    height: 3px;
+    top: 16px;
+    left: 5px;
+    position: absolute;
+    background-color: #ffffff;
+    transition: all .3s linear;
+}
+
+span:before {
+    content: "";
+    width: 25px;
+    height: 3px;
+    bottom: -8px;
+    position: absolute;
+    background-color: #ffffff;
+    transition: all .3s linear;
+}
+
+span:after {
+    content: "";
+    width: 25px;
+    height: 3px;
+    top: -8px;
+    position: absolute;
+    background-color: #ffffff;
+    transition: all .3s linear;
+}
+
+#check:checked ~ span {
+    background-color: transparent;
+}
+
+#check:checked ~ span:before {
+    transform: translate(0px, -8px) rotate(-45deg);
+}
+
+#check:checked ~ span:after {
+    transform: translate(0px, 8px) rotate(45deg);
+}
+
+#check:checked ~ label {
+    border-radius: 20px;
+}
+
+.menu-navbar {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: #64c2c5;
+    position: fixed;
+    float: left;
+    width: 100%;
+    top: 50px;
+    padding: 0;
+    display: none;
+}
+
+.menu-navbar li {
+    margin-top: 1em;
+    
+}
+
+.menu-navbar a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.ultimo-item {
+    margin-bottom: 1em;
+}
+
+#check:checked ~ .menu-navbar {
+    display: visible;
+}
+
+.background {
+    background-image: url("../img/Padu-2.jpg");
+    background-size: cover;
+    height: 200px;
+}
+
+.barra-azul {
+    position: relative;
+}
+
+.custom-shape-divider-top-1625781181 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.custom-shape-divider-top-1625781181 svg {
+    position: relative;
+    display: block;
+    width: calc(123% + 1.3px);
+    height: 191px;
+    transform: rotateY(180deg);
+}
+
+.custom-shape-divider-top-1625781181 .shape-fill {
+    fill: #64C2C5;
+}
+
+/** For mobile devices **/
+@media (max-width: 767px) {
+    .custom-shape-divider-top-1625781181 svg {
+        width: calc(170% + 1.3px);
+        height: 100px;
+    }
+}
+
+.barra-azul h3 {
+    position: relative;
+    color: #ffffff;
+    font-size: 30px;
+    top: 25px;
+    left: 10px;
+}
+
+.sobre-mim {
+    margin-top: 5em;
+}
+
+.texto-sobre-mim {
+    color: #6e6e6e;
+    margin: 0px 30px;
+    text-align: justify;
+}
+
+.sobre-mim h3 {
+    text-align: center;
+    margin: 15px 30px;
+    color: #9275B1;
+}
+
+.lista-de-experiencias {
+    list-style: none;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 0px;
+}
+
+.lista-de-experiencias li {
+    text-align: center;
+    margin: 0px 30px;
+    margin-bottom: 10px;
+    color: #6e6e6e;
+}
+
+.custom-shape-divider-bottom-1625789910 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.github {
+    position: relative;
+    margin-top: 100px;
+}
+
+.custom-shape-divider-bottom-1625789910 svg {
+    position: relative;
+    display: block;
+    width: calc(123% + 1.3px);
+    height: 191px;
+    transform: rotateY(180deg);
+}
+
+.custom-shape-divider-bottom-1625789910 .shape-fill {
+    fill: #9275B1;
+}
+
+/** For mobile devices **/
+@media (max-width: 767px) {
+    .custom-shape-divider-bottom-1625789910 svg {
+        width: calc(170% + 1.3px);
+        height: 100px;
+    }
+}
+
+.github h3 {
+    position: relative;
+    color: #ffffff;
+    font-size: 30px;
+    left: 190px;
+    bottom: 25px;
+}
+}

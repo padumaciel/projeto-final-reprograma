@@ -1,6 +1,11 @@
 * {
-margin: 0px;
+margin: 0;
 font-family: 'Roboto Slab', serif;
+padding: 0;
+border: 0;
+box-sizing: border-box;
+list-style: none;
+text-decoration: none;
 }
 
 /*------- MOBILE FIRST -------*/
@@ -9,126 +14,54 @@ font-family: 'Roboto Slab', serif;
 
 .navbar {
     background-color: #EFE66D;
-    height: 50px;
-}
-
-.container {
-    display:flex;
-    flex-direction: row;
-}
-
-.logo-navbar {
-    height: 40px;
-    position:fixed;
-    right: 85%;
-    top: 2px;
-}
-
-.menu-hamburguer {
-    width: 35px;
-    height: 35px;
-    position: relative;
-    top: 7px;
-    left: 85%;
-    
-}
-
-.menu-hamburguer label {
+    position: absolute;
+    height: 4.3em;
     width: 100%;
-    height: 100%;
-    background-color: #9275B1;
-    position: absolute;
-    transition: all .3s linear;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    /* padding: 1em 0em; */
 }
 
-#check {
-    position: absolute;
-    z-index: 1;
-    display: none;
-}
-
-span {
-    width: 25px;
-    height: 3px;
-    top: 16px;
-    left: 5px;
-    position: absolute;
-    background-color: #ffffff;
-    transition: all .3s linear;
-}
-
-span:before {
-    content: "";
-    width: 25px;
-    height: 3px;
-    bottom: -8px;
-    position: absolute;
-    background-color: #ffffff;
-    transition: all .3s linear;
-}
-
-span:after {
-    content: "";
-    width: 25px;
-    height: 3px;
-    top: -8px;
-    position: absolute;
-    background-color: #ffffff;
-    transition: all .3s linear;
-}
-
-#check:checked ~ span {
-    background-color: transparent;
-}
-
-#check:checked ~ span:before {
-    transform: translate(0px, -8px) rotate(-45deg);
-}
-
-#check:checked ~ span:after {
-    transform: translate(0px, 8px) rotate(45deg);
-}
-
-#check:checked ~ label {
-    border-radius: 20px;
+.titulo-da-pagina {
+    height: 2.5em;
+    color:#9275B1;
+    text-align: center;
+    margin-left: 0.6em;
 }
 
 .menu-navbar {
     list-style: none;
     display: flex;
-    flex-direction: column;
+    justify-content:space-between;
     text-align: center;
-    background-color: #64c2c5;
-    position: fixed;
-    float: left;
     width: 100%;
-    top: 50px;
-    padding: 0;
-    display: none;
+    padding-bottom: 0.5em;
 }
 
 .menu-navbar li {
-    margin-top: 1em;
+    padding: 0em 1em;
+    font-weight: 500;
     
 }
 
 .menu-navbar a {
     text-decoration: none;
-    color: #ffffff;
+    color:#9275B1;
 }
 
-.ultimo-item {
-    margin-bottom: 1em;
-}
-
-#check:checked ~ .menu-navbar {
-    display: visible;
+.menu-navbar a:hover {
+    text-decoration: none;
+    color:#64C2C5;
 }
 
 .background {
     background-image: url("../img/Padu-2.jpg");
     background-size: cover;
-    height: 200px;
+    background-position-x: center;
+    background-position-y: center;
+    height: 300px;
 }
 
 .barra-azul {
@@ -243,7 +176,719 @@ span:after {
     position: relative;
     color: #ffffff;
     font-size: 30px;
-    left: 190px;
+    left: 250px;
     bottom: 25px;
 }
+
+.cards {
+    width: 100%;
+    padding-left: 5px;
+    display: flex;
+    flex-direction: column-reverse;
+    min-width: 300px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.card__repo {
+    height: 180px;
+    background-color: #fff;
+    text-align: left;
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 85%;
+    float: left;
+    margin-bottom: 10px;
+    margin-top: 15px;
+    box-shadow: 2px 2px 7px #b1b1b1;
+}
+
+.card__repo h2 {
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+}
+
+.tituloRepo {
+    text-align: left;
+    color:#64C2C5;
+}
+
+.descricaoRepo {
+    text-align: left;
+    color: #6e6e6e;
+}
+
+.estrelinha {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.corEstrelinha{
+    color: #FFD813;
+}
+
+.publicRepos {
+    display: flex;
+    align-items: flex-start;
+}
+
+.barra-azul-behance {
+    position: relative;
+    margin-top: 10px;
+    margin-bottom: 2em;
+}
+
+.barra-azul-behance h3 {
+    position: relative;
+    color: #ffffff;
+    font-size: 30px;
+    top: 25px;
+    left: 10px;
+}
+
+.card__behance {
+    height: 180px;
+    background-color: #fff;
+    text-align: left;
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 85%;
+    float: left;
+    margin-bottom: 10px;
+    margin-top: 15px;
+    box-shadow: 2px 2px 7px #b1b1b1;
+}
+
+.card__behance h2 {
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+}
+
+.card__behance1 {
+    height: 180px;
+    background-color: #fff;
+    text-align: center;
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 85%;
+    float: left;
+    margin-bottom: 10px;
+    margin-top: 50px;
+    box-shadow: 2px 2px 7px #b1b1b1;
+}
+
+.card__behance1 h2 {
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+}
+
+.tituloBehance {
+    text-align: center;
+    color:#9275B1;
+}
+
+.tituloBehance a {
+    text-decoration: none;
+    text-align: center;
+    color:#9275B1;
+}
+
+.descricaoBehance {
+    text-align: center;
+    color: #6e6e6e;
+}
+
+.mais-projetos {
+    text-align: center;
+    color: #64C2C5;
+    background-color: #efe66d98;
+    position: absolute;
+    left: 87px;
+    padding: 10px 20px;
+    border-radius:30px;
+    margin: 10px 0px;
+}
+
+.mais-projetos a {
+    text-decoration: none;
+    color: #64c2c5;
+}
+
+.margin-contato {
+    margin-top: 140px;
+    margin-bottom: 50px;
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-um {
+    width: 300px;
+    border-style: solid;
+    border-color: #9275B1;
+    border-width: 3px;
+    margin-bottom: 1em;
+    padding: 5px;
+}
+
+.form-mensagem {
+    width: 300px;
+    height: 200px;
+    border-style: solid;
+    border-color: #9275B1;
+    border-width: 3px;
+    margin-bottom: 1em;
+    padding: 5px;
+}
+
+.btn-enviar {
+    background-color:#9275B1;
+    padding: 10px 20px;
+    font-size: 1em;
+    color: #ffffff;
+    font-weight: 500;
+    margin-bottom: 1.5em;
+}
+
+
+.footer {
+    background-color:#EFE66D;
+    margin-top: 30px;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+
+.redes {
+    width: 300px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.desenvolvido {
+    color: #9275B1;
+}
+
+}
+
+/*------- TABLET -------*/
+
+@media screen and (min-width: 768px) {
+
+    .navbar {
+        height: 7em;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    
+    .titulo-da-pagina {
+        font-size: 2em;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        width: 40%;
+        margin-left: 0.6em;
+    }
+
+    .menu-navbar {
+        list-style: none;
+        display: flex;
+        justify-content: flex-end;
+        text-align: center;
+    }
+    
+    .menu-navbar li{
+        padding: 0em 1em;
+    }
+
+    .menu-navbar a {
+        text-decoration: none;
+        color:#9275B1;
+        font-weight: 500;
+    }
+
+    .menu-navbar a:hover {
+        color:#64c2c5;
+    }
+    
+    .background {
+        height: 38em;
+        background-size: cover;
+    }
+    
+    .barra-azul h3 {
+        position: relative;
+        font-size: 40px;
+        top: 1.6em;
+        left: 0.6em;
+    }
+    
+    .sobre-mim {
+        margin: 0% 20%; 
+        margin-top: 10em;
+        margin-bottom: 10em;
+    }
+    
+    .texto-sobre-mim {
+        margin: 0px 30px;
+        text-align: justify;
+    }
+    
+    .sobre-mim h3 {
+        text-align: left;
+        margin: 15px 30px;;
+    }
+    
+    .lista-de-experiencias li {
+        margin: 0px 30px;
+        margin-bottom: 10px;
+        text-align: left;
+    }
+    
+    .github {
+        position: relative;
+        margin-top: 100px;
+    }
+    
+    .github h3 {
+        position: relative;
+        color: #ffffff;
+        font-size: 40px;
+        left: 80%;
+        bottom: 1.5em;
+    }
+    
+    .cards {
+        width: 80%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin-left: 10%;
+        margin-top: 3em;
+        margin-bottom: 3em;
+        flex-wrap: wrap;
+    }
+    
+    .card__repo {
+        height: 180px;
+        background-color: #fff;
+        text-align: left;
+        border-radius: 10px;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 30%;
+        float: left;
+        box-shadow: 2px 2px 7px #b1b1b1;
+    }
+    
+    .card__repo h2 {
+        margin-block-start: 0em;
+        margin-block-end: 0em;
+        font-size: 1em;
+    }
+    
+    .publicRepos {
+        display: flex;
+        align-items: flex-start;
+    }
+    
+    .barra-azul-behance {
+        position: relative;
+        margin-top: 2em;
+        margin-bottom: 180px;
+    }
+    
+    .barra-azul-behance h3 {
+        position: relative;
+        font-size: 40px;
+        top: 1.6em;
+        left: 0.6em;
+    }
+
+    .card__behance {
+        height: 180px;
+        background-color: #fff;
+        text-align: left;
+        border-radius: 10px;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 30%;
+        float: left;
+        margin-bottom: 10px;
+        margin-top: 15px;
+        box-shadow: 2px 2px 7px #b1b1b1;
+    }
+    
+    .card__behance1 {
+        height: 180px;
+        background-color: #fff;
+        text-align: center;
+        border-radius: 10px;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 30%;
+        float: left;
+        margin-bottom: 10px;
+        margin-top: 12px;
+        box-shadow: 2px 2px 7px #b1b1b1;
+    }
+    
+    .card__behance1 h2 {
+        margin-block-start: 0em;
+        margin-block-end: 0em;
+    }
+    
+    .mais-projetos-be {
+        display: flex;
+        justify-content: center;
+    }
+    .mais-projetos {
+        position: absolute;
+        left: 43%;
+        padding: 10px 20px;
+        border-radius:30px;
+        margin: 10px 0px;
+    }
+    
+    .margin-contato {
+        margin-top: 15em;
+        margin-bottom: 50px;
+    }
+    
+    .formulario {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .form-um {
+        width: 500px;
+        border-style: solid;
+        border-color: #9275B1;
+        border-width: 3px;
+        margin-bottom: 1em;
+        padding: 5px;
+    }
+
+    .form-mensagem {
+        width: 500px;
+        height: 200px;
+        border-style: solid;
+        border-color: #9275B1;
+        border-width: 3px;
+        margin-bottom: 1em;
+        padding: 5px;
+    }
+
+    .btn-enviar {
+        background-color:#9275B1;
+        padding: 10px 20px;
+        font-size: 1em;
+        color: #ffffff;
+        font-weight: 500;
+        margin-bottom: 1.5em;
+    }
+
+    
+    .footer {
+        margin-top: 30px;
+        height: 150px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center; 
+    }
+    
+    .redes {
+        width: 300px;
+        display: flex;
+        justify-content: space-evenly;
+    }
+}
+
+/*------- DESKTOP -------*/
+
+@media screen and (min-width: 1080px) {
+
+    .navbar {
+        height: 7em;
+        width: 100%;
+        display: flex;
+        padding: 0em 1em;
+    }
+    
+    .titulo-da-pagina {
+        font-size: 3em;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        width: 40%;
+        margin-left: 0;
+    }
+    
+    .navbar span {
+        display: none;
+    }
+
+    .menu-navbar {
+        list-style: none;
+        display: flex;
+        justify-content: flex-end;
+        text-align: center;
+        width: 100%;
+        /* position: absolute; */
+    }
+    
+    .menu-navbar li{
+        padding: 0em 1em;
+    }
+
+    .menu-navbar a {
+        text-decoration: none;
+        color:#9275B1;
+        font-weight: 500;
+    }
+
+    .menu-navbar a:hover {
+        color:#64c2c5;
+    }
+    
+    .background {
+        height: 38em;
+        background-size: cover;
+    }
+    
+    .barra-azul h3 {
+        position: relative;
+        font-size: 40px;
+        top: 1.6em;
+        left: 0.6em;
+    }
+    
+    .sobre-mim {
+        margin: 0% 20%; 
+        margin-top: 10em;
+        margin-bottom: 10em;
+    }
+    
+    .texto-sobre-mim {
+        margin: 0px 30px;
+        text-align: justify;
+    }
+    
+    .sobre-mim h3 {
+        text-align: left;
+        margin: 15px 30px;;
+    }
+    
+    .lista-de-experiencias li {
+        margin: 0px 30px;
+        margin-bottom: 10px;
+        text-align: left;
+    }
+    
+    .github {
+        position: relative;
+        margin-top: 100px;
+    }
+    
+    .github h3 {
+        position: relative;
+        color: #ffffff;
+        font-size: 40px;
+        left: 85%;
+        bottom: 1.5em;
+    }
+    
+    .cards {
+        width: 80%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin-left: 10%;
+        margin-top: 3em;
+        margin-bottom: 3em;
+        flex-wrap: wrap;
+    }
+    
+    .card__repo {
+        height: 180px;
+        background-color: #fff;
+        text-align: left;
+        border-radius: 10px;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 30%;
+        float: left;
+        box-shadow: 2px 2px 7px #b1b1b1;
+    }
+    
+    .card__repo h2 {
+        margin-block-start: 0em;
+        margin-block-end: 0em;
+        font-size: 1em;
+    }
+    
+    .publicRepos {
+        display: flex;
+        align-items: flex-start;
+    }
+    
+    .barra-azul-behance {
+        position: relative;
+        margin-top: 2em;
+        margin-bottom: 180px;
+    }
+    
+    .barra-azul-behance h3 {
+        position: relative;
+        font-size: 40px;
+        top: 1.6em;
+        left: 0.6em;
+    }
+
+    .card__behance {
+        height: 180px;
+        background-color: #fff;
+        text-align: left;
+        border-radius: 10px;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 30%;
+        float: left;
+        margin-bottom: 10px;
+        margin-top: 15px;
+        box-shadow: 2px 2px 7px #b1b1b1;
+    }
+    
+    .card__behance1 {
+        height: 180px;
+        background-color: #fff;
+        text-align: center;
+        border-radius: 10px;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 30%;
+        float: left;
+        margin-bottom: 10px;
+        margin-top: 12px;
+        box-shadow: 2px 2px 7px #b1b1b1;
+    }
+    
+    .card__behance1 h2 {
+        margin-block-start: 0em;
+        margin-block-end: 0em;
+    }
+    
+    .mais-projetos-be {
+        display: flex;
+        justify-content: center;
+    }
+    .mais-projetos {
+        position: absolute;
+        left: 43%;
+        padding: 10px 20px;
+        border-radius:30px;
+        margin: 10px 0px;
+    }
+    
+    .margin-contato {
+        margin-top: 15em;
+        margin-bottom: 50px;
+    }
+    
+    .formulario {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .form-um {
+        width: 500px;
+        border-style: solid;
+        border-color: #9275B1;
+        border-width: 3px;
+        margin-bottom: 1em;
+        padding: 5px;
+    }
+
+    .form-mensagem {
+        width: 500px;
+        height: 200px;
+        border-style: solid;
+        border-color: #9275B1;
+        border-width: 3px;
+        margin-bottom: 1em;
+        padding: 5px;
+    }
+
+    .btn-enviar {
+        background-color:#9275B1;
+        padding: 10px 20px;
+        font-size: 1em;
+        color: #ffffff;
+        font-weight: 500;
+        margin-bottom: 1.5em;
+    }
+
+    
+    .footer {
+        margin-top: 30px;
+        height: 150px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center; 
+    }
+    
+    .redes {
+        width: 300px;
+        display: flex;
+        justify-content: space-evenly;
+    }
 }

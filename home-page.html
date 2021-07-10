@@ -6,35 +6,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/home-page.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
     <title>Padu Maciel - Portfolio</title>
 </head>
 <body>
 <header class="header">
     <nav class="navbar">
-        <div class="container">
-        <img class="logo-navbar" src="./img/fav-icon-1.png" alt="Foto de Padu Maciel sorrindo"/>
-        <div class="menu-hamburguer" id="menuHamburguer">
-            <input type="checkbox" id="check">
-            <label for="check"></label>
-            <span></span>
-        </div>
+        <h1 class="titulo-da-pagina">Padu Maciel</h1>
         <ul class="menu-navbar" id="menuNavbar">
-            <li> <a href="">Sobre</a></li>
-            <li> <a href="">Behance</a></li>
-            <li> <a href="">Github</a></li>
-            <li class="ultimo-item"> <a href="">Contato</a></li>
+            <li> <a href="#sobre">Sobre</a></li>
+            <li> <a href="#github">Github</a></li>
+            <li> <a href="#behance">Behance</a></li>
+            <li> <a href="#contato">Contato</a></li>
         </ul>
-        </div>
     </nav>
     <div class="background"></div>
 </header>
+<main>
     <div class="barra-azul">
         <div class="custom-shape-divider-top-1625781181">
             <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
                 <path d="M1200 120L0 16.48 0 0 1200 0 1200 120z" class="shape-fill"></path>
             </svg>
         </div>
-        <h3>Sobre</h3>
+        <h3 id="sobre">Sobre</h3>
     </div>
     <div class="sobre-mim">
         <p class="texto-sobre-mim">
@@ -57,11 +52,76 @@
                 <path d="M1200 120L0 16.48 0 0 1200 0 1200 120z" class="shape-fill"></path>
             </svg>
         </div>
-        <h3>Github</h3>
+        <h3 id="github">Github</h3>
     </div>
-    <main class="cards-github">
+    <section class="cards-github">
     <div id="retornaHTML"></div>
-    </main>
+    </section>
+    <div class="barra-azul-behance">
+        <div class="custom-shape-divider-top-1625781181">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M1200 120L0 16.48 0 0 1200 0 1200 120z" class="shape-fill"></path>
+            </svg>
+        </div>
+        <h3 id="behance">Behance</h3>
+    </div>
+    <div class="cards">
+        <div class="card__behance">
+            <h2 class="tituloBehance"><a href="https://www.behance.net/gallery/119841837/WEB-Blog-Padu-Maciel">Blog Padu Maciel</a></h2>
+            <h3 class="descricaoBehance">Tipo: Identidade Visual</h3>
+        </div>
+        <div class="card__behance">
+            <h2 class="tituloBehance"><a href="https://www.behance.net/gallery/119831537/STOPMOTION-Peguins-10-The-Project">Peguins 1.0: The project</a></h2>
+            <h3 class="descricaoBehance">Tipo: Stop Motion</h3>
+        </div>
+        <div class="card__behance">
+            <h2 class="tituloBehance"><a href="https://www.behance.net/gallery/111972483/EDITORIAL-Formaturas-Infernais">Formaturas Infernais</a></h2>
+            <h3 class="descricaoBehance">Tipo: Design Editorial</h3>
+        </div>
+        <div class="card__behance">
+            <h2 class="tituloBehance"><a href="https://www.behance.net/gallery/111967877/REDESIGN-Advogada-Patricia-Maciel">Patrícia Maciel Advocacia</a></h2>
+            <h3 class="descricaoBehance">Tipo: Identidade Visual</h3>
+        </div>
+        <div class="card__behance">
+            <h2 class="tituloBehance"><a href="https://www.behance.net/gallery/108196523/SOCIAL-MEDIA-Ecoforce-Brasil">Ecoforce Brasil</a></h2>
+            <h3 class="descricaoBehance">Tipo: Social Media</h3>
+        </div>
+        <div class="card__behance1">
+            <h2 class="tituloBehance"><a href="https://www.behance.net/gallery/106512553/the-JUKEBOX">theJUKEBOX</a></h2>
+            <h3 class="descricaoBehance">Tipo: Identidade Visual</h3>
+        </div>
+    </div>
+    <div class="mais-projetos-be">
+        <h2 class="mais-projetos"> <strong><a href="http://behance.net/padumaciel" target="_blank">+Projetos</a></strong></h2>
+    </div>
+    <div class="github margin-contato">
+        <div class="custom-shape-divider-bottom-1625789910">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M1200 120L0 16.48 0 0 1200 0 1200 120z" class="shape-fill"></path>
+            </svg>
+        </div>
+        <h3 id="contato">Contato</h3>
+    </div>
+    <form class="formulario" action="mailto:hello@padumaciel.com" method="GET">
+        <input type="type" name="nome" placeholder="Digite seu nome" required class="form-um"/>
+        <input type="type" name="email" placeholder="Digite seu email" required class="form-um"/>
+        <input type="type" name="assunto" placeholder="Digite o assunto" required class="form-um"/>
+        <input type="type" name="mensagem" placeholder="Digite sua mensagem" required class="form-mensagem"/>
+        <input class="btn-enviar" type="submit" value="Enviar"/> 
+    </form>
+</main>
+    <footer class="footer">
+        <div class="container">
+            <div class="redes">
+            <a href="https://instagram.com/padumaciel" class="redes-sociais"><img src="./img/instagram.png" alt="logo-instagram" /></a>
+            <a href="https://github.com/padumaciel" class="redes-sociais"><img src="./img/github.png" alt="logo-github" /></a>
+            <a href="https://linkedin.com/in/padumaciel" class="redes-sociais"><img src="./img/linkedin.png" alt="logo-linkedin" /></a>
+            <a href="https://behance.net/padumaciel" class="redes-sociais"><img src="./img/behance.png" alt="logo-behance" /></a>
+            <a href="https://padumaciel.com" class="redes-sociais"><img src="./img/wordpress.png" alt="logo-wordpress" /></a>
+            </div>
+            <h4 class="desenvolvido">Desenvolvido por <strong>Paula Maciel</strong></h4>
+        </div>
+    </footer>
 <script src="./js/script-home-page.js"></script>
 </body>
 </html>
